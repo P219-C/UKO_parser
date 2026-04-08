@@ -3,7 +3,7 @@ import re
 import csv
 import sys
 import os
-from pathlib import Path
+import datetime
 
 def main():
 
@@ -29,6 +29,8 @@ def main():
     with open(target_file, 'r') as file:
         with open(output_f, 'w', newline='') as output_file:
             writer = csv.writer(output_file)
+            writer.writerow([f"Parsed by PCC on {datetime.datetime.now()}"])
+            writer.writerow([f"Original file: {target_file}"])
             writer.writerow(["recordID", "lineName", "SP", "LAT_deg", "LAT_min", "LAT_sec", "N_S", "LON_deg", "LON_min", "LON_sec", "E_W", "flag1", "flag2", "LATITUDE", "LONGITUDE"])
             for line in file:
                 line_count += 1

@@ -1,6 +1,7 @@
 
 import re
 import csv
+import datetime
 
 header_count = 0
 data_count = 0
@@ -13,6 +14,8 @@ emptyLine_location = []
 with open(".\\test_data\\J84A.UKO", 'r') as file:
     with open(".\\test_data\\J84A_2.csv", 'w', newline='') as output_file:
         writer = csv.writer(output_file)
+        writer.writerow([f"Parsed by PCC on {datetime.datetime.now()}"])
+        writer.writerow([f"Original file: .\\test_data\\J84A.UKO"])
         writer.writerow(["recordID", "lineName", "SP", "LAT_deg", "LAT_min", "LAT_sec", "N_S", "LON_deg", "LON_min", "LON_sec", "E_W", "LATITUDE", "LONGITUDE"])
         for line in file:
             line_count += 1

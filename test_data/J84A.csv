@@ -1,3 +1,5 @@
+Parsed by PCC on 2026-04-08 10:25:43.195813
+Original file: C:\Users\pablo.crespo-carri\Documents\GitHub\UKO_parser\test_data\J84A.UKO
 recordID,lineName,SP,LAT_deg,LAT_min,LAT_sec,N_S,LON_deg,LON_min,LON_sec,E_W,flag1,flag2,LATITUDE,LONGITUDE
 S,J84A-002,2000,21,45,31.44,S,114,50,55.51,E,0.0,0.0,-21 45 31.44,114 50 55.51
 S,J84A-002,2312,21,42,53.04,S,114,54,27.20,E,0.0,0.0,-21 42 53.04,114 54 27.20
