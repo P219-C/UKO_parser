@@ -11,7 +11,9 @@ EOF_location = []
 emptyLine_location = []
 
 with open(".\\test_data\\J84A.UKO", 'r') as file:
-    with open(".\\test_data\\J84A.csv", 'w', newline='') as output_file:
+    with open(".\\test_data\\J84A_2.csv", 'w', newline='') as output_file:
+        writer = csv.writer(output_file)
+        writer.writerow(["recordID", "lineName", "SP", "LAT_deg", "LAT_min", "LAT_sec", "N_S", "LON_deg", "LON_min", "LON_sec", "E_W", "LATITUDE", "LONGITUDE"])
         for line in file:
             line_count += 1
 
@@ -53,7 +55,7 @@ with open(".\\test_data\\J84A.UKO", 'r') as file:
                 if E_W == 'W':
                     LONGITUDE = "-"+LONGITUDE
 
-                writer = csv.writer(output_file)
+                
                 writer.writerow([recordID, lineName, SP, LAT_deg, LAT_min, LAT_sec, N_S, LON_deg, LON_min, LON_sec, E_W, LATITUDE, LONGITUDE])
                 print(line_count, recordID, lineName, SP, LAT_deg, LAT_min, LAT_sec, N_S, LON_deg, LON_min, LON_sec, E_W, LATITUDE, LONGITUDE)
                 

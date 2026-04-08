@@ -28,6 +28,8 @@ def main():
 
     with open(target_file, 'r') as file:
         with open(output_f, 'w', newline='') as output_file:
+            writer = csv.writer(output_file)
+            writer.writerow(["recordID", "lineName", "SP", "LAT_deg", "LAT_min", "LAT_sec", "N_S", "LON_deg", "LON_min", "LON_sec", "E_W", "flag1", "flag2", "LATITUDE", "LONGITUDE"])
             for line in file:
                 line_count += 1
 
@@ -69,7 +71,7 @@ def main():
                     if E_W == 'W':
                         LONGITUDE = "-"+LONGITUDE
 
-                    writer = csv.writer(output_file)
+                    
                     writer.writerow([recordID, lineName, SP, LAT_deg, LAT_min, LAT_sec, N_S, LON_deg, LON_min, LON_sec, E_W, flag1, flag2, LATITUDE, LONGITUDE])
                     print(f"{line_count}\t{recordID}\t{lineName}\t{SP}\t{LAT_deg}\t{LAT_min}\t{LAT_sec}\t{N_S}\t{LON_deg}\t{LON_min}\t{LON_sec}\t{E_W}\t{flag1}\t{flag2}\t{LATITUDE}\t{LONGITUDE}")
                     
