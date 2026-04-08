@@ -71,7 +71,7 @@ def main():
 
                     writer = csv.writer(output_file)
                     writer.writerow([recordID, lineName, SP, LAT_deg, LAT_min, LAT_sec, N_S, LON_deg, LON_min, LON_sec, E_W, LATITUDE, LONGITUDE])
-                    print(line_count, recordID, lineName, SP, LAT_deg, LAT_min, LAT_sec, N_S, LON_deg, LON_min, LON_sec, E_W, LATITUDE, LONGITUDE)
+                    print(f"{line_count}\t{recordID}\t{lineName}\t{SP}\t{LAT_deg}\t{LAT_min}\t{LAT_sec}\t{N_S}\t{LON_deg}\t{LON_min}\t{LON_sec}\t{E_W}\t{LATITUDE}\t{LONGITUDE}")
                     
                 elif stripped_line.startswith("EOF"):
                     EOF_count += 1
