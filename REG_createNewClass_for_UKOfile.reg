@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Associate .UKO with a per-user ProgID called UKOfile
+[HKEY_CURRENT_USER\Software\Classes\.UKO]
+@="UKOfile"
+
+; Define "UKOfile" class
+[HKEY_CURRENT_USER\Software\Classes\UKOfile]

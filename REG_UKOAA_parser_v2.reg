@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Create the main submenu "UKOAA_parser_v2"
+[HKEY_CURRENT_USER\Software\Classes\UKOfile\shell\UKOAA_parser_v2]
+@="&Parse UKO"
+
+; Subentry 1: Run python script
+[HKEY_CURRENT_USER\Software\Classes\UKOfile\shell\UKOAA_parser_v2\command]
+@="\"C:\\Users\\pablo.crespo-carri\\Documents\\GitHub\\UKO_PARSER\\batch_UKOAAparser.bat\" \"%1\""
