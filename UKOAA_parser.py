@@ -40,7 +40,7 @@ with open(".\\test_data\\J84A.UKO", 'r') as file:
                 N_S = SP_coordinates[1]
                 LON_sec = SP_coordinates[2][-5:]
                 LON_min = SP_coordinates[2][-7:-5]
-                LON_deg = SP_coordinates[2][-9:-7]
+                LON_deg = SP_coordinates[2][-10:-7]
                 E_W = SP_coordinates[3]
 
                 LATITUDE = LAT_deg+" "+LAT_min+" "+LAT_sec

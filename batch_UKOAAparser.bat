@@ -13,7 +13,7 @@ REM ECHO %1
 C:\Users\pablo.crespo-carri\AppData\Local\anaconda3\python.exe "C:\Users\pablo.crespo-carri\Documents\GitHub\UKO_PARSER\UKOAA_parser_v2.py" %1
 
 
-ECHO CODE RUN TO COMPLETION
+ECHO CODE RAN TO COMPLETION
 ECHO REVIEW OUTPUT
 PAUSE
 

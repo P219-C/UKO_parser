@@ -56,7 +56,7 @@ def main():
                     N_S = SP_coordinates[1]
                     LON_sec = SP_coordinates[2][-5:]
                     LON_min = SP_coordinates[2][-7:-5]
-                    LON_deg = SP_coordinates[2][-9:-7]
+                    LON_deg = SP_coordinates[2][-10:-7]
                     E_W = SP_coordinates[3]
 
                     LATITUDE = LAT_deg+" "+LAT_min+" "+LAT_sec
@@ -70,8 +70,8 @@ def main():
                         LONGITUDE = "-"+LONGITUDE
 
                     writer = csv.writer(output_file)
-                    writer.writerow([recordID, lineName, SP, LAT_deg, LAT_min, LAT_sec, N_S, LON_deg, LON_min, LON_sec, E_W, LATITUDE, LONGITUDE])
-                    print(f"{line_count}\t{recordID}\t{lineName}\t{SP}\t{LAT_deg}\t{LAT_min}\t{LAT_sec}\t{N_S}\t{LON_deg}\t{LON_min}\t{LON_sec}\t{E_W}\t{LATITUDE}\t{LONGITUDE}")
+                    writer.writerow([recordID, lineName, SP, LAT_deg, LAT_min, LAT_sec, N_S, LON_deg, LON_min, LON_sec, E_W, flag1, flag2, LATITUDE, LONGITUDE])
+                    print(f"{line_count}\t{recordID}\t{lineName}\t{SP}\t{LAT_deg}\t{LAT_min}\t{LAT_sec}\t{N_S}\t{LON_deg}\t{LON_min}\t{LON_sec}\t{E_W}\t{flag1}\t{flag2}\t{LATITUDE}\t{LONGITUDE}")
                     
                 elif stripped_line.startswith("EOF"):
                     EOF_count += 1
